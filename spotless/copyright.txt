@@ -1,0 +1,6 @@
+/*
+ * Copyright $YEAR, Tedo Manvelidze and the GitNexus project contributors
+ * SPDX-License-Identifier: AGPL-3.0
+ *
+ * Author: Tedo Manvelidze
+ */

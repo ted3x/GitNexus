@@ -1,3 +1,9 @@
+/*
+ * Copyright 2024, Tedo Manvelidze and the GitNexus project contributors
+ * SPDX-License-Identifier: AGPL-3.0
+ *
+ * Author: Tedo Manvelidze
+ */
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
@@ -8,10 +14,10 @@ plugins {
 
 kotlin {
     jvm("desktop")
-    
+
     sourceSets {
         val desktopMain by getting
-        
+
         commonMain.dependencies {
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -28,7 +34,6 @@ kotlin {
         }
     }
 }
-
 
 compose.desktop {
     application {
