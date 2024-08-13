@@ -1,4 +1,3 @@
-```markdown
 # GitNexus
 
 GitNexus is a cross-platform desktop application built using Kotlin Multiplatform (KMP) that
