@@ -40,8 +40,17 @@ compose.desktop {
         mainClass = "me.manvelidze.nexus.MainKt"
 
         nativeDistributions {
+            macOS {
+                iconFile.set(project.file("src/logos/logo.icns"))
+            }
+            windows {
+                iconFile.set(project.file("src/logos/icon.ico"))
+            }
+            linux {
+                iconFile.set(project.file("src/logos/icon.png"))
+            }
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "me.manvelidze.nexus"
+            packageName = "GitNexus"
             packageVersion = "1.0.0"
         }
     }
