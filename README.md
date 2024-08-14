@@ -75,9 +75,8 @@ We welcome contributions from the community! To contribute to GitNexus, please f
 For more information, please read our [Contributing Guide](CONTRIBUTING.md).
 
 ## License
-
-GitNexus is licensed under the MIT License. You are free to use, modify, and distribute this
-software under the terms of the MIT License. See the [LICENSE](LICENSE) file for more details.
+GitNexus is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). You are free to use, modify, and distribute this
+software under the terms of the AGPL-3.0 License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contact
 
