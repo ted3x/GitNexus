@@ -10,6 +10,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.ksp)
 }
 
 kotlin {
@@ -19,14 +20,13 @@ kotlin {
         val desktopMain by getting
 
         commonMain.dependencies {
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            api(libs.carbon)
+
+            implementation(libs.kotlin.inject.runtime)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
@@ -54,4 +54,11 @@ compose.desktop {
             packageVersion = "1.0.0"
         }
     }
+}
+
+dependencies {
+    // KSP will eventually have better multiplatform support and we'll be able to simply have
+    // `ksp libs.kotlinInject.compiler` in the dependencies block of each source set
+    // https://github.com/google/ksp/pull/1021
+    add("kspDesktop", libs.kotlin.inject.compiler)
 }

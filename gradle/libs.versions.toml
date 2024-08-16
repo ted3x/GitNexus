@@ -2,9 +2,15 @@
 androidx-lifecycle = "2.8.0"
 compose-plugin = "1.6.11"
 junit = "4.13.2"
-kotlin = "2.0.0"
+kotlin = "2.0.10"
 kotlinx-coroutines = "1.8.1"
 spotless = "7.0.0.BETA1"
+
+carbon = "0.1.0"
+
+kotlin-inject = "0.7.1"
+
+ksp = "2.0.10-1.0.24"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -14,8 +20,14 @@ androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", nam
 androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 kotlinx-coroutines-swing = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 
+carbon = { module = "com.github.ted3x.carbon-compose:carbon", version.ref = "carbon" }
+
+kotlin-inject-compiler = { module = "me.tatarka.inject:kotlin-inject-compiler-ksp", version.ref = "kotlin-inject" }
+kotlin-inject-runtime = { module = "me.tatarka.inject:kotlin-inject-runtime-kmp", version.ref = "kotlin-inject" }
+
 [plugins]
 jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
