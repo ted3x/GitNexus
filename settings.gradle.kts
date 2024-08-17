@@ -6,10 +6,14 @@ import java.net.URI
  *
  * Author: Tedo Manvelidze
  */
+import java.net.URI
+
 rootProject.name = "GitNexus"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
+    includeBuild("gradle/build-logic")
+
     repositories {
         google {
             mavenContent {
@@ -21,6 +25,9 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
     }
+}
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
 
 dependencyResolutionManagement {
