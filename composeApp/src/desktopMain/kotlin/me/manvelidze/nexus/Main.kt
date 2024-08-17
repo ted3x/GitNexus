@@ -8,13 +8,18 @@ package me.manvelidze.nexus
 
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import com.gabrieldrn.carbon.CarbonDesignSystem
+import com.gabrieldrn.carbon.foundation.color.Gray100Theme
+import me.manvelidze.nexus.feature.auth.AuthScreen
 
 fun main() =
     application {
         Window(
             onCloseRequest = ::exitApplication,
-            title = ""
+            title = "",
         ) {
-            App()
+            CarbonDesignSystem(Gray100Theme, uiShellInlineTheme = Gray100Theme) {
+                AuthScreen()
+            }
         }
     }
