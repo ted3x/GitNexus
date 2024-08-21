@@ -31,25 +31,8 @@ class KotlinMultiplatformConventionPlugin : Plugin<Project> {
                 applyDefaultHierarchyTemplate()
 
                 jvm("desktop")
-//                if (pluginManager.hasPlugin("com.android.library")) {
-//                    androidTarget()
-//                }
-//
-//                // We don't need to build an iOS x64 framework
-//                // iosX64()
-//                iosArm64()
-//                iosSimulatorArm64()
 
                 targets.withType<KotlinNativeTarget>().configureEach {
-//                    binaries.configureEach {
-//                        // Add linker flag for SQLite. See:
-//                        // https://github.com/touchlab/SQLiter/issues/77
-//                        linkerOpts("-lsqlite3")
-//
-//                        // Workaround for https://youtrack.jetbrains.com/issue/KT-64508
-//                        freeCompilerArgs += "-Xdisable-phases=RemoveRedundantCallsToStaticInitializersPhase"
-//                    }
-
                     compilations.configureEach {
                         compileTaskProvider.configure {
                             compilerOptions {

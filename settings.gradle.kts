@@ -45,3 +45,4 @@ dependencyResolutionManagement {
 include(":composeApp")
 include(":resources")
 include(":core:network")
+include(":core:di")
