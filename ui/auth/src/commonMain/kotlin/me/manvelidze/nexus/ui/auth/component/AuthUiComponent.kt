@@ -4,11 +4,11 @@
  *
  * Author: Tedo Manvelidze
  */
-package me.manvelidze.nexus.feature.auth.component
+package me.manvelidze.nexus.ui.auth.component
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import me.manvelidze.nexus.feature.auth.AuthModel
+import me.manvelidze.nexus.ui.auth.AuthModel
 import me.tatarka.inject.annotations.Component
 import me.tatarka.inject.annotations.Provides
 

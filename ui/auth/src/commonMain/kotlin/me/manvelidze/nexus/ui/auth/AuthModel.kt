@@ -4,7 +4,7 @@
  *
  * Author: Tedo Manvelidze
  */
-package me.manvelidze.nexus.feature.auth
+package me.manvelidze.nexus.ui.auth
 
 import arrow.core.Either
 import kotlinx.coroutines.CoroutineScope

@@ -53,4 +53,4 @@ include(":core:network")
 
 include(":data:auth")
 include(":domain:auth")
-include(":feature:auth")
+include(":ui:auth")

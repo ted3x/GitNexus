@@ -11,7 +11,7 @@ import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import com.gabrieldrn.carbon.CarbonDesignSystem
 import com.gabrieldrn.carbon.foundation.color.Gray100Theme
-import me.manvelidze.nexus.feature.auth.AuthScreen
+import me.manvelidze.nexus.ui.auth.AuthScreen
 import me.manvelidze.nexus.inject.DesktopApplicationComponent
 import me.manvelidze.nexus.inject.create
 

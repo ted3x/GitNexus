@@ -24,7 +24,7 @@ kotlin {
 
                 api(projects.data.auth)
                 api(projects.domain.auth)
-                api(projects.feature.auth)
+                api(projects.ui.auth)
 
                 api(libs.apollo)
             }

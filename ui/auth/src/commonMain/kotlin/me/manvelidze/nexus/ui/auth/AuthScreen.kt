@@ -4,7 +4,7 @@
  *
  * Author: Tedo Manvelidze
  */
-package me.manvelidze.nexus.feature.auth
+package me.manvelidze.nexus.ui.auth
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

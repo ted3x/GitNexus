@@ -39,6 +39,6 @@ kotlin {
 
 compose.resources {
     publicResClass = true
-    packageOfResClass = "me.manvelidze.nexus.feature.auth"
+    packageOfResClass = "me.manvelidze.nexus.ui.auth"
     generateResClass = always
 }

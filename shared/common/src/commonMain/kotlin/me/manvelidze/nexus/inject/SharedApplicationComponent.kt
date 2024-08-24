@@ -7,7 +7,7 @@
 package me.manvelidze.nexus.inject
 
 import me.manvelidze.nexus.data.auth.component.AuthPlatformComponent
-import me.manvelidze.nexus.feature.auth.component.AuthUiComponent
+import me.manvelidze.nexus.ui.auth.component.AuthUiComponent
 
 expect interface SharedPlatformApplicationComponent
 
