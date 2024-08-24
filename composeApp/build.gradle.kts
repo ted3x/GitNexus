@@ -4,6 +4,7 @@
  *
  * Author: Tedo Manvelidze
  */
+import me.manvelidze.nexus.gradle.addKspDependencyForAllTargets
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
@@ -13,12 +14,11 @@ plugins {
 }
 
 kotlin {
-    jvm("desktop")
-
     sourceSets {
         val desktopMain by getting
 
         commonMain.dependencies {
+            implementation(projects.shared.common)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
@@ -55,9 +55,8 @@ compose.desktop {
     }
 }
 
-dependencies {
-    // KSP will eventually have better multiplatform support and we'll be able to simply have
-    // `ksp libs.kotlinInject.compiler` in the dependencies block of each source set
-    // https://github.com/google/ksp/pull/1021
-    add("kspDesktop", libs.kotlin.inject.compiler)
+ksp {
+    arg("me.tatarka.inject.generateCompanionExtensions", "true")
 }
+
+addKspDependencyForAllTargets(libs.kotlin.inject.compiler)

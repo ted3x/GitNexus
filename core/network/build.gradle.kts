@@ -18,6 +18,13 @@ kotlin {
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.json)
+
+            implementation(libs.apollo)
+
+            implementation(libs.kotlin.inject.runtime)
+        }
+        desktopMain.dependencies {
+            implementation(libs.ktor.client.java)
         }
     }
 }

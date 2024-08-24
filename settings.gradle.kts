@@ -43,6 +43,14 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
+
 include(":resources")
-include(":core:network")
+include(":shared:common")
+
 include(":core:di")
+include(":core:base")
+include(":core:network")
+
+include(":data:auth")
+include(":domain:auth")
+include(":feature:auth")

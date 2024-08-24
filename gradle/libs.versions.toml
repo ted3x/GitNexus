@@ -16,6 +16,12 @@ kotlin-inject = "0.7.1"
 
 ksp = "2.0.10-1.0.24"
 
+apollo = "4.0.0"
+
+arrow = "1.2.4"
+
+buildkonfig = "0.15.1"
+
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -34,6 +40,10 @@ ktor-serialization-json = { module = "io.ktor:ktor-serialization-kotlinx-json", 
 kotlin-inject-compiler = { module = "me.tatarka.inject:kotlin-inject-compiler-ksp", version.ref = "kotlin-inject" }
 kotlin-inject-runtime = { module = "me.tatarka.inject:kotlin-inject-runtime-kmp", version.ref = "kotlin-inject" }
 
+apollo = { module = "com.apollographql.apollo:apollo-runtime", version.ref = "apollo" }
+
+arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
+
 # Build logic dependencies
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 spotless-gradlePlugin = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
@@ -47,6 +57,10 @@ kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref =
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+apollo = { id = "com.apollographql.apollo", version.ref = "apollo" }
+
+buildkonfig = { id = "com.codingfeline.buildkonfig", version.ref = "buildkonfig" }
 
 nexus-root = { id = "me.manvelidze.root" }
 nexus-compose = { id = "me.manvelidze.compose" }

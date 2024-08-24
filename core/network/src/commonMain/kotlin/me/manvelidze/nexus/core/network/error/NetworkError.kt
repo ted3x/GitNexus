@@ -6,6 +6,8 @@
  */
 package me.manvelidze.nexus.core.network.error
 
-sealed interface NetworkError
+sealed class NetworkError : Exception()
 
-data object NotFound : NetworkError
+data object NotFound : NetworkError() {
+    private fun readResolve(): Any = NotFound
+}
