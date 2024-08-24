@@ -6,17 +6,17 @@
  */
 package me.manvelidze.nexus.ui.auth.component
 
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
+import me.manvelidze.nexus.core.ui.screen.ScreenModelFactory
 import me.manvelidze.nexus.ui.auth.AuthModel
 import me.tatarka.inject.annotations.Component
+import me.tatarka.inject.annotations.IntoSet
 import me.tatarka.inject.annotations.Provides
 
 @Component
 interface AuthUiComponent {
-    val model: AuthModel
-
-    // TODO: Refactor
     @Provides
-    fun providesCoroutineScope() = CoroutineScope(Dispatchers.IO)
+    @IntoSet
+    fun bindsAuthModelFactory(factory: AuthModel.Factory): ScreenModelFactory = factory
+
+    companion object
 }

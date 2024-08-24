@@ -17,6 +17,8 @@ kotlin {
         val desktopMain by getting
 
         commonMain.dependencies {
+            implementation(projects.core.ui)
+            implementation(projects.core.di)
             implementation(projects.core.base)
             implementation(projects.resources)
             implementation(projects.core.network)

@@ -16,8 +16,9 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                api(projects.core.base)
+                api(projects.core.ui)
                 api(projects.core.di)
+                api(projects.core.base)
                 api(projects.core.network)
 
                 api(projects.resources)
@@ -26,7 +27,7 @@ kotlin {
                 api(projects.domain.auth)
                 api(projects.ui.auth)
 
-                api(libs.apollo)
+                implementation(libs.apollo)
             }
         }
     }

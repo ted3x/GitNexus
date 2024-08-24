@@ -22,6 +22,8 @@ arrow = "1.2.4"
 
 buildkonfig = "0.15.1"
 
+voyager = "1.1.0-beta02"
+
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
@@ -43,6 +45,9 @@ kotlin-inject-runtime = { module = "me.tatarka.inject:kotlin-inject-runtime-kmp"
 apollo = { module = "com.apollographql.apollo:apollo-runtime", version.ref = "apollo" }
 
 arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
+
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-screenmodel = { module = "cafe.adriel.voyager:voyager-screenmodel", version.ref = "voyager" }
 
 # Build logic dependencies
 kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
