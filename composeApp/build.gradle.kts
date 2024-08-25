@@ -21,8 +21,6 @@ kotlin {
             implementation(projects.shared.common)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodel)
-            implementation(libs.androidx.lifecycle.runtime.compose)
             api(libs.carbon)
 
             implementation(libs.kotlin.inject.runtime)
