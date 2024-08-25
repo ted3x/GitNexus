@@ -25,7 +25,12 @@ kotlin {
 
                 api(projects.data.auth)
                 api(projects.domain.auth)
-                api(projects.ui.auth)
+                api(projects.ui.auth.api)
+                api(projects.ui.auth.impl)
+
+                api(projects.domain.dashboard)
+                api(projects.ui.dashboard.api)
+                api(projects.ui.dashboard.impl)
 
                 implementation(libs.apollo)
             }

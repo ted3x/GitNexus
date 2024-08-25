@@ -54,7 +54,9 @@ include(":core:network")
 
 include(":data:auth")
 include(":domain:auth")
-include(":ui:auth")
+include(":ui:auth:api")
+include(":ui:auth:impl")
 
 include(":domain:dashboard")
-include(":ui:dashboard")
+include(":ui:dashboard:api")
+include(":ui:dashboard:impl")

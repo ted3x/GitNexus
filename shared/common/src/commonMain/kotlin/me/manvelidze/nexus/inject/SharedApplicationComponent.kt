@@ -6,9 +6,9 @@
  */
 package me.manvelidze.nexus.inject
 
-import me.manvelidze.nexus.core.ui.screen.ScreenModelComponent
 import me.manvelidze.nexus.data.auth.component.AuthPlatformComponent
 import me.manvelidze.nexus.ui.auth.component.AuthUiComponent
+import me.manvelidze.nexus.ui.dashboard.component.DashboardUiComponent
 
 expect interface SharedPlatformApplicationComponent
 
@@ -16,4 +16,4 @@ interface SharedApplicationComponent :
     SharedPlatformApplicationComponent,
     AuthUiComponent,
     AuthPlatformComponent,
-    ScreenModelComponent
+    DashboardUiComponent

@@ -12,7 +12,9 @@ plugins {
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            api(libs.kotlin.inject.runtime)
+            implementation(projects.core.base)
+
+            implementation(libs.kotlin.inject.runtime)
         }
     }
 }

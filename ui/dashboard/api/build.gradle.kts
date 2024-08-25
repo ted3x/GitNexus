@@ -10,9 +10,10 @@ plugins {
 }
 
 kotlin {
+    jvm("desktop")
     sourceSets {
         commonMain.dependencies {
-            api(libs.kotlin.inject.runtime)
+            implementation(libs.circuit.foundation)
         }
     }
 }

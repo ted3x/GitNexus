@@ -6,17 +6,19 @@
  */
 package me.manvelidze.nexus
 
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
-import cafe.adriel.voyager.navigator.Navigator
 import com.gabrieldrn.carbon.CarbonDesignSystem
 import com.gabrieldrn.carbon.foundation.color.Gray100Theme
-import me.manvelidze.nexus.core.ui.screen.LocalScreenModelComponent
+import com.slack.circuit.backstack.rememberSaveableBackStack
+import com.slack.circuit.foundation.CircuitCompositionLocals
+import com.slack.circuit.foundation.NavigableCircuitContent
+import com.slack.circuit.foundation.rememberCircuitNavigator
 import me.manvelidze.nexus.inject.DesktopApplicationComponent
 import me.manvelidze.nexus.inject.create
-import me.manvelidze.nexus.ui.auth.AuthScreen
+import me.manvelidze.nexus.ui.auth.AuthScreens
 
 fun main() =
     application {
@@ -29,8 +31,14 @@ fun main() =
             title = "",
         ) {
             CarbonDesignSystem(Gray100Theme, uiShellInlineTheme = Gray100Theme) {
-                CompositionLocalProvider(LocalScreenModelComponent provides component) {
-                    Navigator(AuthScreen())
+                val backStack = rememberSaveableBackStack(listOf(AuthScreens.Auth))
+                val navigator = rememberCircuitNavigator(backStack) { }
+                CircuitCompositionLocals(component.circuit) {
+                    NavigableCircuitContent(
+                        navigator = navigator,
+                        backStack = backStack,
+                        modifier = Modifier,
+                    )
                 }
             }
         }

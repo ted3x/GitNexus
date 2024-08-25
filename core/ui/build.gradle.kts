@@ -13,12 +13,7 @@ plugins {
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            // Move to core ui or create separate plugin for ui modules
-            api(libs.voyager.navigator)
-            api(libs.voyager.screenmodel)
-
-            implementation(compose.runtime)
-            implementation(libs.kotlin.inject.runtime)
+            api(libs.circuit.foundation)
         }
     }
 }
