@@ -1,3 +1,4 @@
 <resources>
     <string name="auth_welcome">Welcome to GitNexus Desktop</string>
+    <string name="auth_sign_with_github">Sign with GitHub</string>
 </resources>

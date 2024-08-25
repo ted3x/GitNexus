@@ -8,13 +8,16 @@ package me.manvelidze.nexus.ui.auth
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import com.gabrieldrn.carbon.Carbon
-import com.gabrieldrn.carbon.button.IconButton
+import com.gabrieldrn.carbon.button.Button
 import com.gabrieldrn.carbon.foundation.color.containerBackground
 import com.slack.circuit.runtime.CircuitContext
 import com.slack.circuit.runtime.screen.Screen
@@ -58,8 +61,12 @@ fun AuthScreen(
             style = Carbon.typography.heading04.copy(color = Carbon.theme.textPrimary),
         )
 
-        IconButton(painterResource(SharedDrawable.github_mark), onClick = {
-            state.eventSink.invoke(AuthUiEvent.SignWithGithub)
-        })
+        Spacer(modifier = Modifier.height(40.dp))
+        Button(
+            label = stringResource(Res.string.auth_sign_with_github),
+            iconPainter = painterResource(SharedDrawable.github_mark),
+            onClick = {
+                state.eventSink.invoke(AuthUiEvent.SignWithGithub)
+            })
     }
 }
